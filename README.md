@@ -7,6 +7,8 @@ Prerequisites
   - $ install python
   - $ install pip
   - $ install flask
+  - $ install flask_sqlalchemy
+  - $ install flask_wtf
  
 Running python program
  

@@ -62,12 +62,14 @@ class Student(db.Model):
 def add_results():
     form = StudentForm()
     if form.validate_on_submit():
-        student = Student(name=form.name.data, physics=form.physics.data, maths=form.maths.data,chemistry=form.chemistry.data,)
-        db.session.add(student)
-        db.session.commit()
-        # flash('Your account has been created! You are now able to log in', 'success')
-  
-    return render_template('home.html', form=form)
+      student = Student(name=form.name.data, physics=form.physics.data, maths=form.maths.data,chemistry=form.chemistry.data,)
+      db.session.add(student)
+      db.session.commit()
+      return redirect(url_for('add_results'))
+    else:
+      return render_template('home.html', form=form)
+      
+      
 
 
 

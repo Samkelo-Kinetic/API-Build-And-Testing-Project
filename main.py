@@ -14,8 +14,8 @@ class Student(db.Model):
   maths = db.Column(db.Integer)
   chemistry = db.Column(db.Integer)
 
-  def __repr__(self):
-    return f"Student('{self.name}','{self.physics}','{self.maths}','{self.chemistry}')"
+  # def __repr__(self):
+  #   return f"Student('{self.name}','{self.physics}','{self.maths}','{self.chemistry}')"
 
 
 #curl -i http://127.0.0.1:5000/
